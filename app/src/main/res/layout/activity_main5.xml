@@ -4,46 +4,17 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity"
         android:orientation="vertical"
         android:gravity="center">
 
     <TableLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="wrap_content">
 
 
         <TableRow>
 
             <Button
-                    android:id="@+id/Button1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="1" />
-
-        </TableRow>
-
-        <TableRow>
-
-            <Button
-                    android:id="@+id/Button2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="1" />
-
-            <Button
-                    android:id="@+id/Button3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="2" />
-
-        </TableRow>
-
-        <TableRow>
-
-            <Button
-                    android:id="@+id/Button4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="1" />
@@ -51,12 +22,43 @@
             <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="2" />
+                    android:layout_column="2"
+                    android:text="从第2列" />
 
             <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="3" />
+
+            <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1" />
+
+            <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="2"
+                    android:text="占两列" />
+
+            <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3" />
+
+            <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4" />
 
         </TableRow>
 
@@ -83,6 +85,31 @@
                     android:text="4" />
 
         </TableRow>
+
+        <TableRow>
+
+            <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1" />
+
+            <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2" />
+
+            <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3" />
+
+            <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4" />
+
+        </TableRow>
+
 
     </TableLayout>
 
