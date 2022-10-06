@@ -8,9 +8,11 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Random;
 import java.util.UUID;
@@ -70,9 +72,31 @@ public class MainActivity6 extends AppCompatActivity
                 @Override
                 public void onClick(View v)
                 {
+                    View view1 = LayoutInflater.from(MainActivity6.this).inflate(R.layout.item_edit, null);
+
+                    EditText editText_name = view1.findViewById(R.id.EditText_name);
+                    EditText editText_sex = view1.findViewById(R.id.EditText_sex);
+                    EditText editText_age = view1.findViewById(R.id.EditText_age);
+
+                    editText_name.setText(name);
+                    editText_sex.setText(sex);
+                    editText_age.setText(String.valueOf(age));
+
                     new AlertDialog.Builder(MainActivity6.this)
                             .setTitle("更新id为" + id + "的信息")
-                            .setMessage("\n\n\n\n\n\n\n\n\n\n")
+                            .setView(view1)
+                            .setPositiveButton("确认修改", new DialogInterface.OnClickListener()
+                            {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which)
+                                {
+                                    textView_name.setText(editText_name.getText().toString());
+                                    textView_sex.setText(editText_sex.getText().toString());
+                                    textView_age.setText(editText_age.getText().toString());
+                                    toastShow("已更改");
+                                }
+                            })
+                            .setNegativeButton("取消", null)
                             .create()
                             .show();
                 }
@@ -92,6 +116,7 @@ public class MainActivity6 extends AppCompatActivity
                                 public void onClick(DialogInterface dialog, int which)
                                 {
                                     tableLayout.removeView(view);
+                                    toastShow("已删除");
                                 }
                             })
                             .setNeutralButton("取消", null)
@@ -103,5 +128,15 @@ public class MainActivity6 extends AppCompatActivity
 
             tableLayout.addView(view);
         }
+    }
+
+    /**
+     * 显示消息
+     *
+     * @param message 消息
+     */
+    private void toastShow(String message)
+    {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 }
