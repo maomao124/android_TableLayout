@@ -78,9 +78,9 @@ public class MainActivity6 extends AppCompatActivity
                     EditText editText_sex = view1.findViewById(R.id.EditText_sex);
                     EditText editText_age = view1.findViewById(R.id.EditText_age);
 
-                    editText_name.setText(name);
-                    editText_sex.setText(sex);
-                    editText_age.setText(String.valueOf(age));
+                    editText_name.setText(textView_name.getText().toString());
+                    editText_sex.setText(textView_sex.getText().toString());
+                    editText_age.setText(textView_age.getText().toString());
 
                     new AlertDialog.Builder(MainActivity6.this)
                             .setTitle("更新id为" + id + "的信息")
