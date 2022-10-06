@@ -48,13 +48,13 @@ public class MainActivity6 extends AppCompatActivity
 
             View view = LayoutInflater.from(this).inflate(R.layout.item_table, null);
             TextView textView_id = view.findViewById(R.id.id);
-            textView_id.setText(id);
+            textView_id.setText(String.valueOf(id));
             TextView textView_name = view.findViewById(R.id.name);
             textView_name.setText(name);
             TextView textView_sex = view.findViewById(R.id.sex);
             textView_sex.setText(sex);
             TextView textView_age = view.findViewById(R.id.age);
-            textView_age.setText(age);
+            textView_age.setText(String.valueOf(age));
             tableLayout.addView(view);
         }
     }

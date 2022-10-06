@@ -8,6 +8,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
+                android:layout_gravity="center"
                 android:textColor="#00ccff" />
 
         <TextView
@@ -15,6 +16,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
+                android:layout_gravity="center"
                 android:textColor="#ff00cc" />
 
         <TextView
@@ -22,13 +24,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
+                android:layout_gravity="center"
                 android:textColor="#aa00ff" />
 
         <TextView
                 android:id="@+id/age"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:textSize="20sp"
                 android:textColor="#ffcc00" />
+
 
 </TableRow>
